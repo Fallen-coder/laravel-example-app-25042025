@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\App\Http\CommentController;
+use App\Http\Controllers\CommentController;
 Route::get('/', function () {
     return view('welcome');
 });
