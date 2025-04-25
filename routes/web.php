@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CommentController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -19,3 +19,5 @@ Route::get('/', function () {
 Route::get('/test', function (){
     return view('test', ['variable' => "my variable text value"]);
 });
+
+Route::get('/comment',[CommentController::class, 'index']);
