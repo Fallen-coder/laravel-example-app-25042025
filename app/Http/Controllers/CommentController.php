@@ -13,11 +13,17 @@ class CommentController extends Controller
 
         return view("comments.index", ['comments' => $comments]);
     }
+    public function create()
+    {
+        return view("comments.create");
+    }
+    public function store(Request $request)
+    {
+        // dd($request);
+        comment::create([
+            "content" => $request["content"]
+        ]);
+
+        return redirect('/comment');
+    }
 }
-
-
-
-
-//plan
-//AI???
-//folder ko sauc par coments.blade.php

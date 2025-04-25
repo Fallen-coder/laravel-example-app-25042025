@@ -21,3 +21,5 @@ Route::get('/test', function (){
 });
 
 Route::get('/comment',[CommentController::class, 'index']);
+Route::get('/comment/create',[CommentController::class, 'create']);
+Route::post('/comment',[CommentController::class, 'store']);
